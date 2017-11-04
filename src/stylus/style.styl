@@ -1,0 +1,88 @@
+body{
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #115;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.hanzi-item{
+  position: relative;
+  color: #000;
+  border-radius: 1px;
+  display: inline-block !important;
+  background: rgba(240,240,240,1);
+  margin: 0 3px 0px 0;
+  padding: 20px;
+  z-index: 1;
+  line-height: 0;
+  transition: .5s all ease-out;
+  &:hover{
+    cursor: pointer;
+    transition: .1s all ease-out;
+    color: #fff;
+  }
+  .hanzi-char{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    font-size: 1.2em;
+    transform: translate(-50%, -50%);
+  }
+  .hanzi-shade{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: #000;
+  }
+}
+
+#info{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  opacity: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  transition: .3s all cubic-bezier(.79,.01,.16,.99);
+}
+
+.button{
+  width: 80px;
+  height: 30px;
+  background: #000;
+  display: inline-block;
+  margin: 0 3px;
+  border-radius: 3px;
+  padding: 12px 0 0 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  &:hover{
+    cursor: pointer;
+  }
+  &.correct{
+    background: #3c0;
+    &:hover{
+      background: #1a1;
+    }
+  }
+  &.wrong{
+    background: #f03;
+    &:hover{
+      background: #a11;
+    }
+  }
+}
